@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <FrameLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="2">
+        <SurfaceView
+            android:id="@+id/surface"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ImageButton
+            android:id="@+id/take_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/take_pic_selector" />
+        <ImageView
+            android:id="@+id/smallptoto"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        >
+        <ListView
+            android:id="@+id/deal_talk_list"
+            android:layout_above="@+id/send_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:clipToPadding="false"
+            android:divider="@android:color/white"
+            android:background="#ffffff"
+            android:dividerHeight="0.5dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:smoothScrollbar="true" />
+        <RelativeLayout
+            android:id="@+id/send_ll"
+            android:background="#ffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <EditText
+                android:id="@+id/edit_send"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/background_dark"
+                android:layout_toLeftOf="@+id/send"
+                android:maxLines="4"
+                android:scrollbars="vertical"
+                android:textSize="12sp"
+                 />
+            <Button android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_item_select"
+                android:textSize="12sp"
+                android:textColor="@android:color/background_dark"
+                android:text="发送"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
